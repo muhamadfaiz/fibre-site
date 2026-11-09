@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daftar Internet Fibre – Unifi, Maxis & TIME | Faiz</title>
+<meta name="description" content="Saya bantu anda daftar internet fibre Unifi, Maxis atau TIME. Semak liputan percuma, saya uruskan semua dokumen. WhatsApp sekarang.">
+<style>
+:root{
+  --bg:#f7f8f6; --card:#fff; --ink:#18221c; --muted:#5b665f; --line:#e1e5e0;
+  --brand:#128c4a; --brand-d:#0d6b38; --soft:#e6f4ec; --warn:#fff6e0; --warn-line:#f0d58a;
+  --unifi:#f26b21; --maxis:#1a9a4a; --time:#1f56c4;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101512; --card:#171e19; --ink:#eef2ee; --muted:#9aa79f; --line:#28332b; --soft:#143322; --warn:#2b2410; --warn-line:#5c4c17}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:12px;height:56px}
+.logo{font-weight:700;font-size:18px;letter-spacing:-.01em;text-decoration:none}
+.logo span{color:var(--brand)}
+nav{margin-left:auto;display:flex;gap:16px;align-items:center}
+nav a{font-size:14px;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.lang{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer}
+@media(max-width:640px){nav a.hide-sm{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+.btn:hover{background:var(--brand-d)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--card)}
+.hero{padding:48px 0 32px}
+.hero h1{font-size:clamp(28px,5.5vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0 0 14px;max-width:18ch}
+.hero p{font-size:18px;color:var(--muted);max-width:56ch;margin:0 0 22px}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.pill{font-size:13px;background:var(--soft);color:var(--brand-d);padding:4px 12px;border-radius:99px}
+@media(prefers-color-scheme:dark){.pill{color:#7ee0a8}}
+section{padding:36px 0}
+h2{font-size:clamp(22px,4vw,30px);letter-spacing:-.015em;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 22px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:99px;cursor:pointer;font-size:14px;font-weight:600}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column}
+.card .spd{font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.card .big{font-size:34px;font-weight:700;letter-spacing:-.02em;margin:4px 0 0}
+.card .big small{font-size:14px;font-weight:500;color:var(--muted)}
+.card .tag{display:inline-block;align-self:flex-start;font-size:12px;font-weight:600;background:var(--soft);color:var(--brand-d);padding:2px 9px;border-radius:99px;margin:8px 0 2px}
+@media(prefers-color-scheme:dark){.card .tag{color:#7ee0a8}}
+.card ul{margin:10px 0 14px;padding-left:18px;color:var(--muted);font-size:14px;flex:1}
+.card .btn{justify-content:center;padding:10px 14px;font-size:14px}
+.note{background:var(--warn);border:1px solid var(--warn-line);border-radius:10px;padding:12px 14px;font-size:14px;margin-top:14px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;margin-bottom:10px}
+.step h3{margin:0 0 4px;font-size:16px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+.cmp{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+.cmp th,.cmp td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp th{background:var(--soft)}
+.cmp tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:20px;line-height:1;color:var(--muted)}
+details[open] summary::after{content:"–"}
+summary::-webkit-details-marker{display:none}
+details p{margin:0 0 14px;color:var(--muted)}
+.contact{background:var(--ink);color:var(--bg);border-radius:18px;padding:32px 22px;text-align:center}
+.contact h2{margin-bottom:8px}
+.contact p{opacity:.8;margin:0 auto 18px;max-width:50ch}
+.contact .btn{background:#25d366;color:#06310f}
+footer{padding:28px 0 90px;font-size:13px;color:var(--muted)}
+footer p{margin:0 0 8px}
+.fab{position:fixed;right:16px;bottom:16px;z-index:20;background:#25d366;color:#06310f;font-weight:700;text-decoration:none;padding:13px 18px;border-radius:99px;box-shadow:0 6px 20px rgba(0,0,0,.25);display:flex;gap:8px;align-items:center}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><span id="brandA"></span></a>
+    <nav>
+      <a class="hide-sm" href="#pakej" data-t="nav_pkg"></a>
+      <a class="hide-sm" href="#cara" data-t="nav_how"></a>
+      <a class="hide-sm" href="#faq" data-t="nav_faq"></a>
+      <button class="lang" id="langBtn" type="button">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <h1 data-t="h1"></h1>
+    <p data-t="h1p"></p>
+    <div class="cta">
+      <a class="btn wa" href="#" data-t="cta1"></a>
+      <a class="btn ghost" href="#pakej" data-t="cta2"></a>
+    </div>
+    <div class="pills">
+      <span class="pill" data-t="pill1"></span>
+      <span class="pill" data-t="pill2"></span>
+      <span class="pill" data-t="pill3"></span>
+    </div>
+  </div>
+
+  <section id="pakej">
+    <h2 data-t="pkg_h"></h2>
+    <p class="sub" data-t="pkg_sub"></p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="grid" id="cards"></div>
+    <div class="note" id="pkgNote"></div>
+  </section>
+
+  <section id="banding">
+    <h2 data-t="cmp_h"></h2>
+    <p class="sub" data-t="cmp_sub"></p>
+    <div class="scroll"><table class="cmp" id="cmp"></table></div>
+  </section>
+
+  <section id="cara">
+    <h2 data-t="how_h"></h2>
+    <p class="sub" data-t="how_sub"></p>
+    <div class="steps" id="steps"></div>
+  </section>
+
+  <section id="tukar">
+    <h2 data-t="sw_h"></h2>
+    <p class="sub" data-t="sw_p"></p>
+    <a class="btn ghost wa" href="#" data-t="sw_cta"></a>
+  </section>
+
+  <section id="faq">
+    <h2 data-t="faq_h"></h2>
+    <p class="sub"></p>
+    <div id="faqList"></div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <h2 data-t="ct_h"></h2>
+      <p data-t="ct_p"></p>
+      <a class="btn wa" href="#" data-t="ct_btn"></a>
+      <p style="margin:16px 0 0;font-size:14px" id="contactLine"></p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p id="disc"></p>
+    <p id="copy"></p>
+  </div>
+</footer>
+
+<a class="fab wa" href="#" aria-label="WhatsApp"><span>💬</span><span data-t="fab"></span></a>
+
+<script>
+/* =========================================================
+   EDIT HERE — brand, contact and prices live in this block
+   ========================================================= */
+const CONFIG = {
+  brand: "Faiz",                 // shown in header and footer
+  brandTag: "Fibre",             // coloured part of the logo
+  phoneIntl: "60192260176",      // WhatsApp number, no + or spaces
+  phoneShow: "019-226 0176",
+  area: "Jintan & kawasan sekitar", // coverage area line; set "" to hide
+  pricesUpdated: "November 2026"
+};
+
+/* Home prices, RM per month. Update as packages change. */
+const PLANS = {
+  unifi: {
+    name: "Unifi", color: "var(--unifi)",
+    items: [
+      { spd: "100 Mbps", price: "89",  contract: 27, tag: {ms:"3 bulan percuma", en:"3 months free"},
+        pts: {ms:["Muat naik 50 Mbps","Data tanpa had","Wi-Fi 6 Combo Box percuma"], en:["50 Mbps upload","Unlimited data","Free Wi-Fi 6 Combo Box"]}},
+      { spd: "300 Mbps", price: "129", contract: 27, tag: {ms:"3 bulan percuma", en:"3 months free"},
+        pts: {ms:["Muat naik 50 Mbps","Data tanpa had","Wi-Fi 6 Combo Box percuma"], en:["50 Mbps upload","Unlimited data","Free Wi-Fi 6 Combo Box"]}},
+      { spd: "500 Mbps", price: "149", contract: 27, tag: {ms:"3 bulan percuma", en:"3 months free"},
+        pts: {ms:["Muat naik 100 Mbps","Data tanpa had","Mesh Wi-Fi tersedia (tambahan)"], en:["100 Mbps upload","Unlimited data","Mesh Wi-Fi available (add-on)"]}},
+      { spd: "1 Gbps",   price: "349", contract: null, tag: null,
+        pts: {ms:["Untuk rumah besar / ramai pengguna","Data tanpa had"], en:["For big homes / many users","Unlimited data"]}}
+    ],
+    note: {
+      ms: "Promosi tertentu untuk pelanggan beralih dari ISP lain (contohnya bundle kamera pintar) ditawarkan mengikut kelayakan. Tanya saya.",
+      en: "Special offers for customers switching from another ISP (e.g. smart-camera bundles) depend on eligibility. Ask me."
+    }
+  },
+  maxis: {
+    name: "Maxis", color: "var(--maxis)",
+    items: [
+      { spd: "100 Mbps", price: "89",  contract: 24, tag: null,
+        pts: {ms:["Data tanpa had","Router Wi-Fi percuma"], en:["Unlimited data","Free Wi-Fi router"]}},
+      { spd: "300 Mbps", price: "99",  contract: 36, tag: {ms:"Promosi hingga 31 Dis 2026", en:"Promo until 31 Dec 2026"},
+        pts: {ms:["Rebat dikreditkan selepas pemasangan","Warganegara Malaysia sahaja","Tertakluk liputan & kelayakan"], en:["Rebate applied after installation","Malaysians only","Subject to coverage & eligibility"]}},
+      { spd: "500 Mbps", price: "149", contract: 24, tag: {ms:"3 bulan percuma", en:"3 months free"},
+        pts: {ms:["Data tanpa had","Router Wi-Fi percuma"], en:["Unlimited data","Free Wi-Fi router"]}},
+      { spd: "1 Gbps",   price: "249", contract: 24, tag: {ms:"3 bulan percuma", en:"3 months free"},
+        pts: {ms:["Untuk rumah besar / ramai pengguna","Data tanpa had"], en:["For big homes / many users","Unlimited data"]}}
+    ],
+    note: {
+      ms: "Pelanggan Maxis Postpaid mungkin layak harga lebih murah (Converged). Maxis juga mempunyai kawasan liputan sendiri di mana Unifi tiada. Pemasangan biasanya mengambil 2–4 minggu.",
+      en: "Maxis Postpaid customers may qualify for a lower price (Converged). Maxis also has its own coverage areas where Unifi isn't available. Installation usually takes 2–4 weeks."
+    }
+  },
+  time: {
+    name: "TIME", color: "var(--time)",
+    items: [
+      { spd: "200 Mbps", price: "99",  contract: 24, tag: null,
+        pts: {ms:["Muat naik 200 Mbps","Router Wi-Fi 6"], en:["200 Mbps upload","Wi-Fi 6 router"]}},
+      { spd: "600 Mbps", price: "139", contract: 24, tag: {ms:"Promo RM99 / 6 bulan pertama", en:"Promo RM99 for first 6 months"},
+        pts: {ms:["Muat naik 500 Mbps","Router Wi-Fi 7"], en:["500 Mbps upload","Wi-Fi 7 router"]}},
+      { spd: "1 Gbps",   price: "199", contract: 24, tag: null,
+        pts: {ms:["Muat naik 500 Mbps","Router Wi-Fi 7"], en:["500 Mbps upload","Wi-Fi 7 router"]}},
+      { spd: "2 Gbps",   price: "379", contract: 24, tag: null,
+        pts: {ms:["Untuk pengguna kuasa","Router prestasi tinggi"], en:["For power users","High-performance router"]}}
+    ],
+    note: {
+      ms: "TIME menggunakan infrastruktur sendiri, kebanyakannya di bangunan tinggi. Liputan TIME berbeza daripada Unifi/Maxis, jadi saya semak ikut alamat anda. Harga tertakluk cukai perkhidmatan 6% (sahkan dengan saya).",
+      en: "TIME runs its own network, mostly in high-rise buildings. TIME coverage differs from Unifi/Maxis, so I check by your address. Prices may be subject to 6% service tax (confirm with me)."
+    }
+  }
+};
+
+/* =========================================================
+   Copy (Malay / English)
+   ========================================================= */
+const T = {
+  ms: {
+    nav_pkg:"Pakej", nav_how:"Cara daftar", nav_faq:"Soalan lazim",
+    h1:"Nak pasang internet rumah? Saya uruskan semuanya.",
+    h1p:"Saya ejen yang bantu anda pilih dan daftar fibre Unifi, Maxis atau TIME. Semak liputan, bandingkan harga, siapkan dokumen. Anda cuma tunggu juruteknik datang.",
+    cta1:"WhatsApp saya sekarang", cta2:"Lihat pakej",
+    pill1:"Semak liputan percuma", pill2:"Pemasangan standard percuma", pill3:"Bandingkan 3 penyedia",
+    pkg_h:"Pakej internet rumah", pkg_sub:"Harga sebulan (RM). Pilih penyedia untuk lihat pakej.",
+    perMonth:"/bulan", months:"bulan kontrak", ask:"Tanya pakej ini",
+    cmp_h:"Perbandingan pantas", cmp_sub:"Harga biasa tanpa promosi tertentu, untuk anda mula bandingkan.",
+    cmp_speed:"Kelajuan", cmp_none:"Tiada",
+    how_h:"Cara daftar", how_sub:"Mudah, dan saya bantu setiap langkah.",
+    s1h:"Hantar alamat", s1p:"WhatsApp alamat pemasangan anda. Saya semak penyedia mana yang ada liputan.",
+    s2h:"Pilih pakej", s2p:"Saya terangkan harga, kontrak, bayaran awal dan penalti dengan jelas sebelum anda setuju.",
+    s3h:"Hantar dokumen", s3p:"Gambar kad pengenalan (warganegara) atau pasport (warga asing) dan bil utiliti terkini. Saya yang daftarkan.",
+    s4h:"Pemasangan", s4p:"Juruteknik hubungi anda untuk tetapkan tarikh. Unifi biasanya dalam kira-kira seminggu.",
+    sw_h:"Nak tukar dari ISP lain?",
+    sw_p:"Kalau kontrak anda sudah tamat atau hampir tamat, mungkin ada tawaran penukaran yang lebih jimat. Tawaran berbeza untuk setiap pelanggan, jadi hantar nama pakej semasa anda dan saya semak apa yang boleh diatur.",
+    sw_cta:"Semak tawaran tukar",
+    faq_h:"Soalan lazim",
+    ct_h:"Jom semak liputan rumah anda", ct_p:"Hantar alamat melalui WhatsApp. Biasanya saya balas pada hari yang sama.",
+    ct_btn:"WhatsApp saya", fab:"WhatsApp",
+    wamsg:"Hi, saya nak tanya pasal internet fibre",
+    waplan:(p,s)=>`Hi, saya berminat dengan ${p} ${s}. Boleh semak liputan?`,
+    disc:"Laman ini dikendalikan oleh ejen pendaftaran bebas. Ia bukan laman rasmi Unifi (Telekom Malaysia), Maxis atau TIME. Semua nama dan tanda dagangan adalah milik pemilik masing-masing. Harga dikemas kini pada {d} dan boleh berubah. Pengesahan akhir harga, promosi dan kelayakan dibuat semasa pendaftaran.",
+    area:"Kawasan: ",
+    faq:[
+      ["Berapa kos untuk saya guna perkhidmatan anda?","Tiada caj untuk anda. Anda bayar harga pakej kepada penyedia seperti pelanggan biasa. Saya hanya membantu memilih dan mendaftar."],
+      ["Bagaimana nak tahu ada liputan atau tidak?","Hantar alamat anda melalui WhatsApp. Unifi dan Maxis berkongsi infrastruktur yang sama, tetapi Maxis ada kawasan sendiri. TIME pula berasingan dan semakan dibuat ikut nama bangunan. Saya semak ketiga-tiganya untuk anda."],
+      ["Dokumen apa yang diperlukan?","Warganegara: salinan kad pengenalan berwarna depan dan belakang, serta bil utiliti terkini (elektrik, air, cukai tanah/pintu atau Indah Water) bagi alamat pemasangan yang sama. Warga asing: pasport berwarna dan bil utiliti. Perniagaan: dokumen SSM, kad pengenalan pemilik/pengarah, surat kuasa dan bil utiliti."],
+      ["Ada bayaran awal atau deposit?","Bergantung penyedia. Contohnya Unifi mengenakan bayaran pendahuluan RM100 selepas pemasangan untuk warganegara, dan deposit RM500 untuk warga asing sebelum pemasangan. Maxis dan TIME juga mengenakan deposit RM500 untuk warga asing. Saya jelaskan semuanya sebelum anda setuju."],
+      ["Berapa lama masa pemasangan?","Unifi biasanya dalam kira-kira seminggu. Maxis lebih lama, kira-kira 2–4 minggu kerana melibatkan dua pasukan juruteknik. Juruteknik akan menelefon 2–3 hari sebelum, kadangkala dari nombor yang tidak dikenali."],
+      ["Adakah pemasangan percuma?","Pemasangan standard adalah percuma setakat ini. Kerja luar biasa seperti menggali, memasang semula jubin, mengecat atau menyembunyikan kabel adalah atas kos pelanggan."],
+      ["Kalau pasang di kondominium atau apartmen?","Pemasangan di bangunan bertingkat yang ada pengurusan biasanya hanya pada hari bekerja kerana pejabat pengurusan tutup hujung minggu. Rumah tanah boleh dipasang bila-bila hari."],
+      ["Boleh tukar atau turun taraf pakej semasa kontrak?","Secara amnya tidak boleh turun taraf semasa kontrak, dan tukar pakej boleh menyebabkan promosi hilang. Naik taraf kelajuan kadangkala dibenarkan. Pilih kelajuan yang sesuai dari awal, saya bantu anggarkan."],
+      ["Apa jadi kalau saya tamatkan kontrak awal?","Penalti dikenakan, biasanya berdasarkan baki bulan kontrak. Peraturan berbeza ikut penyedia. Saya akan terangkan penalti bagi pakej yang anda pilih sebelum mendaftar."],
+      ["Berapa kelajuan yang sesuai untuk rumah saya?","Untuk 1–3 pengguna dan tontonan video, 100–300 Mbps cukup. Untuk 4–6 pengguna, kerja dari rumah dan permainan, pilih 500 Mbps. Rumah besar atau ramai peranti, pertimbangkan 1 Gbps dan mesh Wi-Fi."],
+      ["Ada pakej untuk perniagaan?","Ada. Unifi, Maxis dan TIME semuanya ada pakej perniagaan dengan IP tetap (tambahan) dan sokongan khas. Hubungi saya dengan butiran syarikat anda."]
+    ]
+  },
+  en: {
+    nav_pkg:"Packages", nav_how:"How to sign up", nav_faq:"FAQ",
+    h1:"Need home internet? I'll handle everything.",
+    h1p:"I'm an agent who helps you choose and register Unifi, Maxis or TIME fibre. I check coverage, compare prices and prepare the paperwork. You just wait for the technician.",
+    cta1:"WhatsApp me now", cta2:"See packages",
+    pill1:"Free coverage check", pill2:"Free standard installation", pill3:"Compare 3 providers",
+    pkg_h:"Home internet packages", pkg_sub:"Monthly price (RM). Pick a provider to see its packages.",
+    perMonth:"/month", months:"month contract", ask:"Ask about this plan",
+    cmp_h:"Quick comparison", cmp_sub:"Regular prices without special promos, to start comparing.",
+    cmp_speed:"Speed", cmp_none:"N/A",
+    how_h:"How to sign up", how_sub:"Simple, and I help at every step.",
+    s1h:"Send your address", s1p:"WhatsApp me your installation address. I check which providers cover it.",
+    s2h:"Pick a package", s2p:"I explain the price, contract, upfront payment and penalties clearly before you agree.",
+    s3h:"Send documents", s3p:"A photo of your IC (Malaysian) or passport (foreigner) and a recent utility bill. I do the registration.",
+    s4h:"Installation", s4p:"The technician contacts you to set a date. Unifi is usually around a week.",
+    sw_h:"Switching from another ISP?",
+    sw_p:"If your contract has ended or is about to, there may be a cheaper switching offer. Offers differ per customer, so send me your current plan and I'll check what I can arrange.",
+    sw_cta:"Check switch offers",
+    faq_h:"Frequently asked questions",
+    ct_h:"Let's check your home's coverage", ct_p:"Send your address on WhatsApp. I usually reply the same day.",
+    ct_btn:"WhatsApp me", fab:"WhatsApp",
+    wamsg:"Hi, I'd like to ask about fibre internet",
+    waplan:(p,s)=>`Hi, I'm interested in ${p} ${s}. Can you check coverage?`,
+    disc:"This site is run by an independent registration agent. It is not an official site of Unifi (Telekom Malaysia), Maxis or TIME. All names and trademarks belong to their owners. Prices updated {d} and may change. Final price, promotions and eligibility are confirmed at registration.",
+    area:"Area: ",
+    faq:[
+      ["What does your service cost me?","Nothing extra. You pay the package price to the provider like any customer. I just help you choose and register."],
+      ["How do I know if I have coverage?","Send me your address on WhatsApp. Unifi and Maxis share the same infrastructure, but Maxis has its own areas too. TIME is separate and checked by building name. I check all three for you."],
+      ["What documents do I need?","Malaysians: colour copy of IC front and back, plus a recent utility bill (electricity, water, quit rent/assessment or Indah Water) for the same installation address. Foreigners: colour passport and utility bill. Businesses: SSM documents, owner/director IC, authorisation letter and utility bill."],
+      ["Is there an advance payment or deposit?","It depends on the provider. For example Unifi charges a RM100 advance payment after installation for Malaysians, and a RM500 deposit for foreigners before installation. Maxis and TIME also take a RM500 deposit from foreigners. I explain everything before you agree."],
+      ["How long does installation take?","Unifi is usually around a week. Maxis takes longer, roughly 2–4 weeks, because two technician teams are involved. The technician calls 2–3 days before, sometimes from an unknown number."],
+      ["Is installation free?","Standard installation is currently free. Non-standard work such as trenching, retiling, repainting or concealing cables is at the customer's cost."],
+      ["What about condos and apartments?","Buildings with a management office usually allow installation on weekdays only, as the office is closed on weekends. Landed homes can be done any day."],
+      ["Can I change or downgrade my plan during the contract?","Generally you can't downgrade during the contract, and changing plans can forfeit a promo. Speed upgrades are sometimes allowed. Pick the right speed from the start and I'll help you estimate."],
+      ["What if I end the contract early?","An early termination penalty applies, usually based on the remaining months. Rules differ by provider. I explain the penalty for your chosen plan before you register."],
+      ["What speed do I need?","For 1–3 users streaming video, 100–300 Mbps is enough. For 4–6 users, working from home and gaming, go for 500 Mbps. Big homes or many devices, consider 1 Gbps and mesh Wi-Fi."],
+      ["Do you do business plans?","Yes. Unifi, Maxis and TIME all have business packages with optional fixed IP and priority support. Contact me with your company details."]
+    ]
+  }
+};
+
+/* =========================================================
+   App
+   ========================================================= */
+let lang = "ms";
+try { const s = localStorage.getItem("lang"); if (s === "ms" || s === "en") lang = s; } catch(e){}
+let provider = "unifi";
+
+const $ = s => document.querySelector(s);
+const waLink = text => `https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(text)}`;
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  $("#brandA").innerHTML = `${CONFIG.brand} <span>${CONFIG.brandTag}</span>`;
+  $("#langBtn").textContent = lang === "ms" ? "EN" : "BM";
+  document.querySelectorAll("[data-t]").forEach(el => { el.textContent = t[el.dataset.t] ?? ""; });
+  document.querySelectorAll("a.wa").forEach(a => a.href = waLink(t.wamsg));
+
+  // tabs
+  $("#tabs").innerHTML = Object.entries(PLANS).map(([k,p]) =>
+    `<button class="tab" role="tab" data-k="${k}" aria-selected="${k===provider}"><span class="dot" style="background:${p.color}"></span> ${p.name}</button>`).join(" ");
+  document.querySelectorAll(".tab").forEach(b => b.onclick = () => { provider = b.dataset.k; render(); });
+
+  // cards
+  const P = PLANS[provider];
+  $("#cards").innerHTML = P.items.map(i => `
+    <div class="card">
+      <div class="spd">${P.name} · ${i.spd}</div>
+      <div class="big">RM${i.price}<small>${t.perMonth}</small></div>
+      ${i.tag ? `<span class="tag">${i.tag[lang]}</span>` : ""}
+      <ul>${i.pts[lang].map(x=>`<li>${x}</li>`).join("")}${i.contract ? `<li>${i.contract} ${t.months}</li>` : ""}</ul>
+      <a class="btn" href="${waLink(t.waplan(P.name,i.spd))}">${t.ask}</a>
+    </div>`).join("");
+  $("#pkgNote").textContent = P.note[lang];
+
+  // comparison table
+  const speeds = ["100 Mbps","200 Mbps","300 Mbps","500 Mbps","600 Mbps","1 Gbps","2 Gbps"];
+  const cell = (k,s) => { const i = PLANS[k].items.find(x=>x.spd===s); return i ? `RM${i.price}` : "–"; };
+  const used = speeds.filter(s => Object.keys(PLANS).some(k => PLANS[k].items.some(x=>x.spd===s)));
+  $("#cmp").innerHTML = `<thead><tr><th>${t.cmp_speed}</th>${Object.values(PLANS).map(p=>`<th>${p.name}</th>`).join("")}</tr></thead><tbody>` +
+    used.map(s=>`<tr><td><b>${s}</b></td>${Object.keys(PLANS).map(k=>`<td>${cell(k,s)}</td>`).join("")}</tr>`).join("") + `</tbody>`;
+
+  // steps
+  $("#steps").innerHTML = [1,2,3,4].map(n => `<div class="step"><h3>${t["s"+n+"h"]}</h3><p>${t["s"+n+"p"]}</p></div>`).join("");
+
+  // faq
+  $("#faqList").innerHTML = t.faq.map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+
+  // contact + footer
+  $("#contactLine").innerHTML = `📱 ${CONFIG.phoneShow}` + (CONFIG.area ? ` · ${t.area}${CONFIG.area}` : "");
+  $("#disc").textContent = t.disc.replace("{d}", CONFIG.pricesUpdated);
+  $("#copy").textContent = `© ${new Date().getFullYear()} ${CONFIG.brand}`;
+}
+
+$("#langBtn").onclick = () => {
+  lang = lang === "ms" ? "en" : "ms";
+  try { localStorage.setItem("lang", lang); } catch(e){}
+  render();
+};
+render();
+</script>
+</body>
+</html>
